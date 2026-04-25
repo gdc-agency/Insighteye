@@ -5,24 +5,25 @@ import Counter from './Counter'
 export default function CounterUp({ end }) {
     const [inViewport, setInViewport] = useState(false)
 
-    const handleScroll = () => {
-        const elements = document.getElementsByClassName('count-text')
-        if (elements.length > 0) {
+    useEffect(() => {
+        const handleScroll = () => {
+            const elements = document.getElementsByClassName('count-text')
+            if (elements.length === 0) return
+
             const element = elements[0]
             const rect = element.getBoundingClientRect()
             const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight
-            if (isInViewport && !inViewport) {
-                setInViewport(true)
-            }
-        }
-    }
+            if (!isInViewport) return
 
-    useEffect(() => {
+            setInViewport(prev => (prev ? prev : true))
+        }
+
         window.addEventListener('scroll', handleScroll)
+        handleScroll()
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
-    }, [handleScroll]) // Added 'handleScroll' here
+    }, [])
 
     return (
         <>

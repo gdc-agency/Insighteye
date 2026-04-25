@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ModalVideo from 'react-modal-video'
 
 
@@ -14,9 +14,9 @@ export default function VideoPopup({ style, text }) {
 
             {!style &&
                 <div className="video-btn">
-                    <a onClick={() => setOpen(true)} className="lightbox-image">
+                    <button type="button" onClick={() => setOpen(true)} className="lightbox-image">
                         <i className="icon-17"></i>
-                    </a>
+                    </button>
                 </div>
             }
                     

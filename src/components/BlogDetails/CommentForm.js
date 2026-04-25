@@ -1,4 +1,4 @@
-const CommentForm = ({ }) => {
+const CommentForm = () => {
     return (
         <div className="comment-form">
             <h3>Leave A Comments</h3>

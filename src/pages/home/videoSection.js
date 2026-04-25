@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import videobgImg from '../../assets/images/background/video-bg.jpg';
 
@@ -21,7 +21,9 @@ const Video = () => {
           <div className="auto-container">
             <div className="inner-box">
               <div className="video-btn">
-                <a className="popup-video" onClick={() => { openModal(); }}><i className="icon-17" /></a>
+                <button type="button" className="popup-video" onClick={() => { openModal(); }}>
+                  <i className="icon-17" />
+                </button>
               </div>
               <h2>
                 Watch Our Private <br />

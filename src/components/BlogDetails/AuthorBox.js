@@ -1,12 +1,12 @@
 import authorImage from '../../assets/images/news/author-2.jpg'
 
-const AuthorBox = ({ }) => {
+const AuthorBox = () => {
     return (
         <div className="author-box mb_50">
             <figure className="author-thumb">
                 <img
                     src={authorImage}
-                    alt="Post Image"
+                    alt="Author"
                 />
             </figure>
             <h4>Sandra Bullock</h4>

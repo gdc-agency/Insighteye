@@ -1,7 +1,7 @@
 import React from 'react';
 import author1 from '../../assets/images/news/author-1.jpg';
 
-const BlockQuote = ({ }) => {
+const BlockQuote = () => {
     return (
         <blockquote>
             <div className="icon-box gradient-color">
@@ -16,7 +16,7 @@ const BlockQuote = ({ }) => {
             <figure className="thumb-box">
                 <img
                     src={author1}
-                    alt="Post Image"
+                    alt="Author"
                 />
             </figure>
             <h3>Ronald Richards</h3>
